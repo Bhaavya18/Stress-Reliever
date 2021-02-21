@@ -63,7 +63,7 @@ app.post("/", function(req, res) {
   const url="https://us7.api.mailchimp.com/3.0/lists/1d444df942";
   const options={
     method:"post",
-    auth:bhaavyaRampal:e507fb6ca90b48fce49ad0351ff21e8b-us7
+    auth:"bhaavyaRampal:e507fb6ca90b48fce49ad0351ff21e8b-us7"
   };
   const request=https.request(url,options,function(response){
     if(response.statusCode===200){
