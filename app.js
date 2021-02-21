@@ -12,7 +12,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 let name;
-mongoose.connect("mongodb+srv://admin_bhaavya:"+process.env.PASSWORD+"@cluster1.esqzc.mongodb.net/affirmationDB",{useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connect("mongodb+srv://admin_bhaavya:test123@cluster1.esqzc.mongodb.net/affirmationDB",{useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 
 const itemsSchema = mongoose.Schema({
   name: String
