@@ -153,6 +153,10 @@ app.get("/white-noise",function(req,res){
 app.get("/meditation-zone",function(req,res){
   res.sendFile(__dirname+"/meditation-zone.html");
 });
-app.listen(3000, function() {
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+app.listen(port, function() {
   console.log("server is runing on port 3000");
 });
