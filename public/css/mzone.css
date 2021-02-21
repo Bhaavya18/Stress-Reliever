@@ -1,0 +1,148 @@
+body {
+  background-image: url(../images/meditate.gif);
+  background-position: center center;
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  /* Background image is fixed in the viewport so that it doesn't move when
+    the content's height is greater than the image's height */
+  background-attachment: fixed;
+  /* This is what makes the background image rescale based
+    on the container's size */
+  background-size: cover;
+  /* Set a background color that will be displayed
+    while the background image is loading */
+  background-color: #464646;
+}
+/*navbar*/
+.hmicon {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 25px;
+  font-size: 200%;
+  background-color: #030200;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  /*box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5),
+    inset 8px 10px 10px rgba(255, 255, 255, 0.75);
+  -o-box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5),
+    inset 8px 10px 10px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5),
+    inset 8px 10px 10px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5),
+    inset 8px 10px 10px rgba(255, 255, 255, 0.75);
+  transition: background ease-in-out 2s;*/
+  width: 50px;
+  z-index: 999;
+}
+
+.icon {
+  color: white;
+}
+
+#hmb:hover {
+  background-color: #7f53ac;
+  background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #42378f;
+  background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  visibility: hidden;
+}
+
+.ele {
+  list-style: none;
+  line-height: 2;
+  font-size: 250%;
+  font-family: 'Amatic SC', cursive;
+  font-weight: 900;
+}
+
+.cross {
+  text-align: center;
+}
+
+#remove {
+  font-size: 200%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5),
+    inset 8px 10px 10px rgba(255, 255, 255, 0.75);
+  -o-box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5),
+    inset 8px 10px 10px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5),
+    inset 8px 10px 10px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5),
+    inset 8px 10px 10px rgba(255, 255, 255, 0.75);
+  width: 50px;
+  background-color: #fba8a4;
+  background-image: linear-gradient(315deg, #fba8a4 0%, #dad2f3 74%);
+  transition: background ease-in-out 2s;
+}
+
+#remove:hover {
+  background-color: #eec0c6;
+  background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+}
+
+.dest {
+  text-decoration: none;
+  color: #030200;
+  padding: 5px;
+  transition: background-color ease-in 0.5s, color ease-in 0.5s;
+}
+
+.dest:hover {
+  color: #ecbcb4;
+  background-color: #29539b;
+  background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+  text-decoration:underline;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 60vh;
+}
+
+.play-button {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 12px;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  font-size: 170%;
+  font-family: 'Josefin Slab', serif;
+  font-weight: bold;
+}
+
+.playicon {
+  margin-right: 10px;
+  font-size: 30px;
+}
+@media screen and (max-width:768px){
+  .play-button {
+    width: 160px;
+  }
+}

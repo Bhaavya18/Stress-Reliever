@@ -1,0 +1,134 @@
+body{
+background-color: #7f5a83;
+background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+}
+/* Navbar */
+.hmicon {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 25px;
+  font-size: 200%;
+  background-color: #030200;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  /*box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5),
+    inset 8px 10px 10px rgba(255, 255, 255, 0.75);
+  -o-box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5),
+    inset 8px 10px 10px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5),
+    inset 8px 10px 10px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5),
+    inset 8px 10px 10px rgba(255, 255, 255, 0.75);
+  transition: background ease-in-out 2s;*/
+  width: 50px;
+  z-index: 999;
+}
+
+.icon {
+  color: white;
+}
+
+#hmb:hover {
+  background-color: #7f53ac;
+  background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #42378f;
+  background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  visibility: hidden;
+}
+
+.ele {
+  list-style: none;
+  line-height: 2;
+  font-size: 250%;
+  font-family: 'Amatic SC', cursive;
+  font-weight: 900;
+}
+
+.cross {
+  text-align: center;
+}
+
+#remove {
+  font-size: 200%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5),
+    inset 8px 10px 10px rgba(255, 255, 255, 0.75);
+  -o-box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5),
+    inset 8px 10px 10px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5),
+    inset 8px 10px 10px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5),
+    inset 8px 10px 10px rgba(255, 255, 255, 0.75);
+  width: 50px;
+  background-color: #fba8a4;
+  background-image: linear-gradient(315deg, #fba8a4 0%, #dad2f3 74%);
+  transition: background ease-in-out 2s;
+}
+
+#remove:hover {
+  background-color: #eec0c6;
+  background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+}
+
+.dest {
+  text-decoration: none;
+  color: #030200;
+  padding: 5px;
+  transition: background-color ease-in 0.5s, color ease-in 0.5s;
+}
+
+.dest:hover {
+  color: #ecbcb4;
+  background-color: #29539b;
+  background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+}
+/* Main display */
+body{
+  background-image: url("../images/background4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card{
+  margin-bottom:35px;
+}
+.card-body{
+  height:280px;
+}
+.container{
+  margin-top: 3%;
+}
+.inner{
+  overflow: hidden;
+}
+.inner img{
+  transition: all 1.5s ease;
+}
+.inner:hover img{
+  transform: scale(1.5);
+}
+.col-md-4{
+  margin-bottom: 5rem;
+}
+@media screen and (max-width: 768px){
+  .card{
+    font-size:110%;
+  }
+}

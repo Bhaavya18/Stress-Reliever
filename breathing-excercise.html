@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!--Google font-->
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+  <!--Font awesome icons-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+  <!--custom stylesheet-->
+  <link rel="stylesheet" href="css/breathe.css" />
+  <title>Breathing Excercise</title>
+</head>
+
+<body>
+  <nav>
+    <button id="hmb" class="hmicon"><i class="fas fa-bars icon"></i></button>
+    <div id="menu" class="wrapper">
+      <ul>
+        <li class="ele"><a class="dest" href="/home">Home</a></li>
+        <li class="ele"><a class="dest" href="/meditation-zone">Meditation Zone</a></li>
+        <li class="ele"><a class="dest" href="/breathing-excercise">Breathing Excercise</a></li>
+        <li class="ele"><a class="dest" href="/white-noise">White Noise</a></li>
+        <li class="ele"><a class="dest" href="/relaxing-sound">Relaxing Music</a></li>
+        <br>
+        <div class="cross"><button id="remove"><i class="fas fa-times"></i></button></div>
+    </div>
+  </nav>
+  <h1>Relaxer</h1>
+
+  <div class="container" id="container">
+    <div class="circle"></div>
+
+    <p id="text"></p>
+
+    <div class="pointer-container">
+      <span class="pointer"></span>
+    </div>
+
+    <div class="gradient-circle"></div>
+  </div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+   //navbar
+   $('#hmb').click(function() {
+     $('#menu').css('visibility', 'visible');
+   });
+   $('#remove').click(function() {
+      $('#menu').css('visibility','hidden');
+   });
+    //Main js
+    const container = document.getElementById('container');
+    const text = document.getElementById('text');
+
+    const totalTime = 7500;
+    const breatheTime = (totalTime / 5) * 2;
+    const holdTime = totalTime / 5;
+
+    breathAnimation();
+
+    function breathAnimation() {
+      text.innerText = 'Breathe In!';
+      container.className = 'container grow';
+
+      setTimeout(() => {
+        text.innerText = 'Hold';
+
+        setTimeout(() => {
+          text.innerText = 'Breathe Out!';
+          container.className = 'container shrink';
+        }, holdTime);
+      }, breatheTime);
+    }
+
+    setInterval(breathAnimation, totalTime);
+  </script>
+</body>
+
+</html>

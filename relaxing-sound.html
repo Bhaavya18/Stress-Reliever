@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relaxing Sounds</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+  <!--google fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!--custom stylesheet-->
+  <link rel="stylesheet" href="css/relaxing.css">
+</head>
+
+<body>
+  <nav>
+    <button id="hmb" class="hmicon"><i class="fas fa-bars icon"></i></button>
+    <div id="menu" class="wrapper">
+      <ul>
+        <li class="ele"><a class="dest" href="/home">Home</a></li>
+        <li class="ele"><a class="dest" href="/meditation-zone">Meditation Zone</a></li>
+        <li class="ele"><a class="dest" href="/breathing-excercise">Breathing Excercise</a></li>
+        <li class="ele"><a class="dest" href="/white-noise">White Noise</a></li>
+        <li class="ele"><a class="dest" href="/relaxing-sound">Relaxing Music</a></li>
+        <br>
+        <div class="cross"><button id="remove"><i class="fas fa-times"></i></button></div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="card shadow">
+          <div class="inner">
+            <img class="card-img-top" src="images/adventure.jpg" alt="Card image cap">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Adventure</h5>
+            <p class="card-text">Soft cinematic royalty music composition featuring piano, strings, percussion, marimba, glockenspiel and timpani.
+              This track has a nice mood suitable for travel and adventure videos.</p>
+            <div class="controls">
+              <audio id="adventure" class="audio" name="audio" src="sounds/bensound-adventure.mp3"></audio>
+              <button class="playpausebtn btn btn-primary" onclick="playAudio('adventure')">Play</button>
+              <button class="mutebtn btn btn-primary" onclick="pauseAudio('adventure')">Pause</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="card shadow">
+          <div class="inner">
+            <img class="card-img-top" src="images/better days.jpg" alt="Card image cap">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Better Days</h5>
+            <p class="card-text">Slow ambient cinematic piece with a melancholic and sad feel.
+              The minimalist guitar part is accompanied by soft strings.</p>
+            <div class="controls">
+              <audio id="better days" class="audio" name="audio" src="sounds/bensound-betterdays.mp3"></audio>
+              <button class="playpausebtn btn btn-primary" onclick="playAudio('better days')">Play</button>
+              <button class="mutebtn btn btn-primary" onclick="pauseAudio('better days')">Pause</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="card shadow">
+          <div class="inner">
+            <img class="card-img-top" src="images/going higher.jpg" alt="Card image cap">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Going Higher</h5>
+            <p class="card-text">Epic royalty rock music featuring electric guitars, drums, bass, strings and marimba.</p>
+            <div class="controls">
+              <audio id="going higher" class="audio" name="audio" src="sounds/bensound-goinghigher.mp3"></audio>
+              <button class="playpausebtn btn btn-primary" onclick="playAudio('going higher')">Play</button>
+              <button class="mutebtn btn btn-primary" onclick="pauseAudio('going higher')">Pause</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="card shadow">
+          <div class="inner">
+            <img class="card-img-top" src="images/new beginning.jpg" alt="Card image cap">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">New Beginning</h5>
+            <p class="card-text">Pop rock royalty music with an epic and "achievement" feeling.
+              The song start with a guitar intro that progressively lead to a powerful and energetic chorus</p>
+            <div class="controls">
+              <audio id="new beginning" class="audio" name="audio" src="sounds/bensound-anewbeginning.mp3"></audio>
+              <button class="playpausebtn btn btn-primary" onclick="playAudio('new beginning')">Play</button>
+              <button class="mutebtn btn btn-primary" onclick="pauseAudio('new beginning')">Pause</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="card shadow">
+          <div class="inner">
+            <img class="card-img-top" src="images/relaxing.jpg" alt="Card image cap">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Relaxing</h5>
+            <p class="card-text"> Relaxing meditation royalty free music track suitable for massage or a landscape video.
+            <p>
+            <div class="controls">
+              <audio id="relaxing" class="audio" name="audio" src="sounds/bensound-relaxing.mp3"></audio>
+              <button class="playpausebtn btn btn-primary" onclick="playAudio('relaxing')">Play</button>
+              <button class="mutebtn btn btn-primary" onclick="pauseAudio('relaxing')">Pause</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="card shadow">
+          <div class="inner">
+            <img class="card-img-top" src="images/tenderness.jpg" alt="Card image cap">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Tenderness</h5>
+            <p class="card-text">Gentle acoustic royalty free music featuring acoustic guitar and piano.
+              This track will be nice on your family videos or to add a tender mood to your project.</p>
+            <div class="controls">
+              <audio id="tenderness" class="audio" name="audio" src="sounds/bensound-tenderness.mp3"></audio>
+              <button class="playpausebtn btn btn-primary" onclick="playAudio('tenderness')">Play</button>
+              <button class="mutebtn btn btn-primary" onclick="pauseAudio('tenderness')">Pause</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script type="text/javascript">
+  $('#hmb').click(function() {
+    $('#menu').css('visibility', 'visible');
+  });
+  $('#remove').click(function() {
+     $('#menu').css('visibility','hidden');
+  });
+    //buttons play and pause
+    function playAudio(id_input) {
+      var audio = document.getElementById(id_input);
+      if (audio) {
+        audio.play();
+      }
+    }
+
+    function pauseAudio(id_input) {
+      var audio = document.getElementById(id_input);
+      if (audio && (audio.paused === false)) {
+        audio.pause();
+      }
+    }
+  </script>
+</body>
+
+</html>
