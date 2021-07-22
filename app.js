@@ -12,7 +12,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 let name;
-mongoose.connect("mongodb+srv://admin_bhaavya:test123@cluster1.esqzc.mongodb.net/affirmationDB",{useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster1.esqzc.mongodb.net/affirmationDB`,{useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 
 const itemsSchema = mongoose.Schema({
   name: String
@@ -60,10 +60,10 @@ app.post("/", function(req, res) {
     }]
   };
   const jsonData = JSON.stringify(data);
-  const url="https://us7.api.mailchimp.com/3.0/lists/1d444df942";
+  const url=`${process.env.API_URL}`;
   const options={
     method:"post",
-    auth:"bhaavyaRampal:e507fb6ca90b48fce49ad0351ff21e8b-us7"
+    auth:`${process.env.API_USERNAME}:${process.env.API_KEY}`
   };
   const request=https.request(url,options,function(response){
     if(response.statusCode===200){
